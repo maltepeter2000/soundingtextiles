@@ -1,0 +1,60 @@
+#N canvas 186 161 1116 714 12;
+#X obj 42 376 soundfiler;
+#X obj 157 133 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom 42 396 31 0 0 0 - - - 0;
+#X obj 42 422 s \$0-sample-length;
+#X obj 42 245 openpanel;
+#X text 170 131 open new file;
+#X obj 41 328 pack s f;
+#X obj 116 315 f \$0;
+#X obj 118 297 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 399 133 array define \$0-wovenMemory 5e+06;
+#X obj 351 204 tabplay~ \$0-wovenMemory;
+#X obj 348 288 outlet~;
+#X obj 254 113 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X text 271 111 replay;
+#X obj 111 114 hsl 128 15 50 100 0 1 empty empty volume\\\ (50-100%)
+-2 -8 0 10 #bbbbbb #000000 #000000 12700 1;
+#X floatatom 108 132 5 0 0 0 - - - 0;
+#X obj 348 257 *~;
+#X obj 365 233 / 100;
+#X obj 204 36 inlet;
+#X obj 280 33 inlet;
+#X obj 100 35 inlet;
+#X obj 399 108 loadbang;
+#X msg 40 353 read -resize -maxsize 5e+06 \$1 \$2-wovenMemory;
+#X obj 155 153 delay 100 1 msec;
+#X obj 349 181 delay 500 1 msec;
+#X obj 280 163 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 349 157 stop;
+#X connect 0 0 2 0;
+#X connect 0 0 25 0;
+#X connect 1 0 9 0;
+#X connect 1 0 23 0;
+#X connect 2 0 3 0;
+#X connect 4 0 6 0;
+#X connect 6 0 22 0;
+#X connect 7 0 6 1;
+#X connect 8 0 7 0;
+#X connect 10 0 16 0;
+#X connect 12 0 26 0;
+#X connect 12 0 10 0;
+#X connect 14 0 15 0;
+#X connect 15 0 17 0;
+#X connect 16 0 11 0;
+#X connect 17 0 16 1;
+#X connect 18 0 1 0;
+#X connect 19 0 12 0;
+#X connect 20 0 14 0;
+#X connect 21 0 9 0;
+#X connect 22 0 0 0;
+#X connect 23 0 4 0;
+#X connect 23 0 8 0;
+#X connect 24 0 10 0;
+#X connect 25 0 26 0;
+#X connect 26 0 24 0;
+#X coords 0 714 1 713 220 73 0;
