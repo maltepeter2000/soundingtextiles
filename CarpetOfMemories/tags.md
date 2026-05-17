@@ -4,8 +4,8 @@ tags:
       - Weaving
       - Pompom
     conductive_material:
-      - Shieldex HC 40 Yarn
-      - Copper Yarn
+      - "Shieldex HC 40 Yarn"
+      - "Copper Yarn"
     description: >
       In many cultures, there is a tradition to create a new piece for the household
       from scraps and leftover textiles from outdated or destroyed garments.
